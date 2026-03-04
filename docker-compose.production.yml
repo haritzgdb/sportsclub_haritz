@@ -6,6 +6,7 @@ services:
 
   # Aplicación Blue: Usamos la imagen de Docker Hub en lugar de construir localmente
   app-blue:
+    image: haritzgdb/sportsclub:latest
     restart: always
     environment:
       - DEBUG=False
@@ -13,6 +14,7 @@ services:
 
   # Aplicación Green: Igual que Blue, compartiendo la misma imagen endurecida
   app-green:
+    image: haritzgdb/sportsclub:latest
     restart: always
     environment:
       - DEBUG=False
