@@ -10,7 +10,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    # Solo se ejecuta si el workflow anterior (Tests) tuvo éxito
+    environment: midockerhub
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
